@@ -1,0 +1,207 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: url('/images/pexels-skylar-kang-6368833.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative; /* Ensure the position is relative to handle overlay */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Black overlay with high opacity */
+    z-index: -1; /* Ensure it is behind the content */
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.85); /* Slightly transparent background */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    margin: 0 20px;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-section {
+    flex: 1;
+    margin: 0 20px; /* Adjust the gap here */
+    position: relative;
+}
+
+.input-section input[type="text"] {
+    padding-right: 30px; /* Add space for the calendar icon */
+}
+
+.input-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-section input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.calculate-btn {
+    width: 60%;
+    padding: 10px;
+    background: linear-gradient(135deg, #00bcd4, #8e24aa); /* Gradient from blue to purple */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.calculate-btn:hover {
+    background: linear-gradient(135deg, #008c95, #6a1b9a); /* Darker gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+
+.results {
+    margin-top: 20px;
+    display: none; /* Initially hidden */
+}
+
+.result-section {
+    margin-bottom: 10px;
+}
+
+.result-section h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 0.9rem;
+}
+
+.reset-btn {
+    display: none; /* Initially hide reset button */
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #007BFF;
+    background-color: #fff;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.reset-btn:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin: 0 10px;
+    }
+    .input-section input {
+        width: 90%;
+    }
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .header p {
+        font-size: 0.875rem;
+    }
+
+    .input-group {
+        flex-direction: column; /* Stack inputs vertically */
+    }
+
+    .input-section {
+        margin: 0 0 10px; /* Adjust margin for stacked inputs */
+    }
+
+    .input-section input {
+        font-size: 0.875rem; /* Smaller font size for inputs */
+    }
+
+    .calculate-btn {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .result-section h2 {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.25rem;
+    }
+
+    .header p {
+        font-size: 0.75rem;
+    }
+
+    .calculate-btn {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+
+    .result-section h2 {
+        font-size: 1rem;
+    }
+}
