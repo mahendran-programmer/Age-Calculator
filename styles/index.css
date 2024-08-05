@@ -13,7 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: url('../images/pexels-skylar-kang-6368833.jpg') no-repeat center center fixed;
+    background: url('../pexels-skylar-kang-6368833.jpg') no-repeat center center fixed;
 
     background-size: cover;
     position: relative; /* Ensure the position is relative to handle overlay */
